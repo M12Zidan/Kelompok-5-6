@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.app.kelompok_5_6.screen.HomeScreen
+import com.app.kelompok_5_6.screen.LoginScreen
 import com.app.kelompok_5_6.screen.ProfileScreen
 
 @Composable
@@ -15,7 +16,7 @@ fun SetupNavGraph(
 
     NavHost(
         navController = navController,
-        startDestination = Screen.Home.route,
+        startDestination = Screen.Login.route,
         modifier = modifier
     ) {
         composable(route = Screen.Home.route) {
@@ -24,6 +25,10 @@ fun SetupNavGraph(
 
         composable(route = Screen.Profile.route) {
             ProfileScreen()
+        }
+
+        composable(route = Screen.Login.route) {
+            LoginScreen(navController = navController)
         }
     }
 }
