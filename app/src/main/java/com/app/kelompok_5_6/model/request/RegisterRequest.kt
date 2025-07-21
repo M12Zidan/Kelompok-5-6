@@ -4,5 +4,5 @@ data class RegisterRequest(
     val nm_lengkap: String,
     val email: String,
     val username: String,
-    val passsword: String
+    val password: String
 )
