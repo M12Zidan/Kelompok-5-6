@@ -3,6 +3,7 @@ package com.app.kelompok_5_6.service.api
 import com.app.kelompok_5_6.model.request.LoginRequest
 import com.app.kelompok_5_6.model.request.RegisterRequest
 import com.app.kelompok_5_6.model.response.LoginResponse
+import com.app.kelompok_5_6.model.response.NotesResponse
 import com.app.kelompok_5_6.model.response.RegisterResponse
 import retrofit2.Response
 import retrofit2.http.Body
@@ -33,8 +34,10 @@ interface ApiService {
      * @param request objek LoginRequest yang berisi username dan password.
      * @return Response<LoginResponse> dari server berisi token dan data pengguna.
      */
-    @POST("/api/login")
+    @POST("api/login")
     suspend fun login(@Body request: LoginRequest): Response<LoginResponse>
 
+    @GET("api/notes")
+    suspend fun getAllNotes(): NotesResponse
 
 }

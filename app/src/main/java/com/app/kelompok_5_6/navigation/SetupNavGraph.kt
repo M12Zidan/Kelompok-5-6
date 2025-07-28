@@ -28,7 +28,7 @@ fun SetupNavGraph(navController: NavHostController, modifier: Modifier = Modifie
     ) {
         // Rute ke halaman Home
         composable(route = Screen.Home.route) {
-            HomeScreen()
+            HomeScreen(navController)
         }
 
         // Rute ke halaman Result dengan parameter "text"
