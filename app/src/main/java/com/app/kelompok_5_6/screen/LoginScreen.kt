@@ -34,6 +34,7 @@ import androidx.navigation.NavHostController
 import com.app.kelompok_5_6.model.request.LoginRequest
 import com.app.kelompok_5_6.navigation.Screen
 import com.app.kelompok_5_6.service.api.ApiClient
+import com.app.kelompok_5_6.utils.PreferenceManager
 import kotlinx.coroutines.launch
 
 /**
@@ -139,6 +140,8 @@ fun LoginScreen(navController: NavHostController) {
                             val body = response.body()
 
                             if (response.isSuccessful && body?.code == 200) {
+                                val token = body.token
+                                PreferenceManager.setToken(context,token.toString())
                                 // Login sukses, navigasi ke halaman Home
                                 Toast.makeText(context, "Login berhasil!", Toast.LENGTH_SHORT).show()
                                 navController.navigate(Screen.Home.route) {

@@ -10,6 +10,6 @@ sealed class Screen(val route: String) {
 
     object Login: Screen(route = "login")
 
-
+    object CreateNote: Screen(route = "create_note")
 
 }

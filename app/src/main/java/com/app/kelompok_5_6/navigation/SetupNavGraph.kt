@@ -7,6 +7,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.app.kelompok_5_6.screen.CreateNoteScreen
 import com.app.kelompok_5_6.screen.HomeScreen
 import com.app.kelompok_5_6.screen.LoginScreen
 import com.app.kelompok_5_6.screen.ProfileScreen
@@ -47,6 +48,10 @@ fun SetupNavGraph(navController: NavHostController, modifier: Modifier = Modifie
         // Rute ke halaman Register
         composable(route = Screen.Register.route) {
             RegisterScreen(navController)
+        }
+
+        composable(route = Screen.CreateNote.route) {
+            CreateNoteScreen(navController)
         }
     }
 }

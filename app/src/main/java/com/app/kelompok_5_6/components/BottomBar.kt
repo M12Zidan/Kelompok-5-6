@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Create
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalContentColor
@@ -52,6 +53,9 @@ fun BottomBar(
     val itemsMenu = listOf(
         BottomNavItem(Screen.Home.route) {
             Icon(imageVector = Icons.Default.Home, contentDescription = "Home")
+        },
+        BottomNavItem(Screen.CreateNote.route) {
+            Icon(imageVector = Icons.Default.Create, contentDescription = "Create Note")
         },
         BottomNavItem(Screen.Profile.route) {
             Icon(imageVector = Icons.Default.AccountCircle, contentDescription = "Profile")
